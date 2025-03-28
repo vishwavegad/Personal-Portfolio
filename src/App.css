@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root{
+    --background-color: #fff;
+    --btn-color: rgb(90, 54, 32);
+    --btn-text-color: #fff;
+    --text-color: rgb(90, 54, 32);
+    --nav-color: #fff;
+    --dropdown-color: rgb(90, 54, 32);
+    /* --nav-text-color: rgb(90, 54, 32); */
+}
+
+[data-theme='dark']{
+    --background-color: #222;
+    --btn-color: #fff;
+    --btn-text-color: #222;
+    --text-color: #fff;
+    --nav-color: #222;
+    --dropdown-color: #222;
+    /* --nav-text-color: white; */
+}
+
+body{
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 70px;
+    /* margin-left: 100px; */
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1,h2,p{
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+h2,p{
+    font-family: 'Roboto Mono', monospace;
+}
