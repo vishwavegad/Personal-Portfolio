@@ -8,6 +8,7 @@ import leetcodelight from '../assets/leetcodelight.svg'
 import githubdark from '../assets/githubdark.svg'
 import linkedindark from '../assets/linkedindark.svg'
 import leetcodedark from '../assets/leetcodedark.svg'
+import Resume from '../assets/Vishwa Vegad.pdf'
 // import contactMePage from '../components/ContactMe'
 import {useTheme} from '../common/ThemeContext'
 
@@ -18,7 +19,7 @@ function HeroSection() {
     const linkedinIcon = theme==='light'?linkedinlight:linkedindark;
     const leetcodeIcon = theme==='light'?leetcodelight:leetcodedark;
   return (
-    <main className='flex justify-center'>
+    <main id='home' className='flex justify-center'>
         <section className='flex flex-col justify-center gap-5 text-center min-h-screen max-w-md'>
             <div className='flex justify-center pt-5'>
                 <img className='size-60 rounded-full ml-6' src={heroImage} alt='Profile Picture of Vishwa Vegad' />
@@ -33,8 +34,8 @@ function HeroSection() {
                     <a href="https://leetcode.com/u/vishwaavegad/" target='_blank'><img className='w-6 mt-0.5' src={leetcodeIcon} /></a>
                 </span>
                 <p className='text-sm font-medium'>I build things, break things, and then fix them (hopefully before anyone notices), all while confidently saying 'it works on my machine.'<br/><br/>Hi, I’m Vishwa, a Full Stack Developer who loves solving problems (and occasionally creating them).</p>
-                <a href='./ContactMe.jsx' target='_blank'>
-                    <button className='rounded-3xl p-2 w-30 transition duration-300 ease-in-out hover:cursor-pointer hover:scale-107' style={{backgroundColor: 'var(--btn-color)', color:'var(--btn-text-color'}}>Contact Me</button>
+                <a href={Resume} download>
+                    <button className='rounded-3xl p-2 w-30 transition duration-300 ease-in-out hover:cursor-pointer hover:scale-107' style={{backgroundColor: 'var(--btn-color)', color:'var(--btn-text-color)'}}>Resume</button>
                     {/* <button>Resume</button> */}
                 </a>
             </div>

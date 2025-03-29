@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+html, body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 :root{
     --background-color: #fff;
     --btn-color: rgb(90, 54, 32);
@@ -7,6 +12,8 @@
     --text-color: rgb(90, 54, 32);
     --nav-color: #fff;
     --dropdown-color: rgb(90, 54, 32);
+    --bar-color: rgb(170, 150, 138);
+    --bar-after-color: rgb(62, 46, 46);
     /* --nav-text-color: rgb(90, 54, 32); */
 }
 
@@ -17,6 +24,8 @@
     --text-color: #fff;
     --nav-color: #222;
     --dropdown-color: #222;
+    --bar-color: rgb(55, 52, 52);
+    --bar-after-color: rgb(197, 190, 190);
     /* --nav-text-color: white; */
 }
 
