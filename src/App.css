@@ -11,9 +11,9 @@ html, body{
     --btn-text-color: #fff;
     --text-color: rgb(90, 54, 32);
     --nav-color: #fff;
-    --dropdown-color: rgb(90, 54, 32);
-    --bar-color: rgb(170, 150, 138);
-    --bar-after-color: rgb(62, 46, 46);
+    --dropdown-color: rgb(90, 54, 32, 0.7);
+    --bar-percent-color: rgb(90, 54, 32);
+    --bar-color: rgb(165, 160, 160);
     /* --nav-text-color: rgb(90, 54, 32); */
 }
 
@@ -24,8 +24,9 @@ html, body{
     --text-color: #fff;
     --nav-color: #222;
     --dropdown-color: #222;
-    --bar-color: rgb(55, 52, 52);
-    --bar-after-color: rgb(197, 190, 190);
+    --bar-percent-color: #fff;
+    --bar-color: rgb(121, 118, 118);
+    /* rgb(197, 190, 190) */
     /* --nav-text-color: white; */
 }
 
