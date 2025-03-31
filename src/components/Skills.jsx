@@ -24,7 +24,7 @@ const CircularProgress = ({ percentage, skill, icon }) => {
   return (
     <div className="flex flex-col items-center m-4">
       <div className="relative">
-        <svg width="100" height="100" viewBox="0 0 100 100">
+        <svg width="90" height="90" viewBox="0 0 100 100">
           <circle
             cx="50"
             cy="50"
@@ -47,7 +47,7 @@ const CircularProgress = ({ percentage, skill, icon }) => {
           />
         </svg>
         <img
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 size-10"
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 size-8"
           src={icon}
           alt={skill}
         />
@@ -66,68 +66,92 @@ function Skills() {
     setTimeout(() => setAnimation(true), 500);
   }, []);
 
-  const skills = [
+  const skillsCategories = [
     {
-      name: "HTML",
-      icon: htmlLogo,
-      percentage: 95,
+      title: "Frontend Technologies",
+      bgColor: "var(--skills-background-color)",
+      skills: [
+        {
+          name: "HTML",
+          icon: htmlLogo,
+          percentage: 95,
+        },
+        {
+          name: "CSS",
+          icon: cssLogo,
+          percentage: 90,
+        },
+        {
+          name: "Tailwind CSS",
+          icon: tailwindLogo,
+          percentage: 85,
+        },
+        {
+          name: "JavaScript",
+          icon: jsLogo,
+          percentage: 80,
+        },
+        {
+          name: "React",
+          icon: reactLogo,
+          percentage: 70,
+        },
+      ],
     },
     {
-      name: "CSS",
-      icon: cssLogo,
-      percentage: 90,
+      title: "Backend Technologies",
+      bgColor: "var(--skills-background-color)",
+      skills: [
+        {
+          name: "Java",
+          icon: javaLogo,
+          percentage: 90,
+        },
+        {
+          name: "Node.js",
+          icon: nodeLogo,
+          percentage: 90,
+        },
+        {
+          name: "Express.js",
+          icon: expressLogo,
+          percentage: 95,
+        },
+      ],
     },
     {
-      name: "Tailwind CSS",
-      icon: tailwindLogo,
-      percentage: 85,
+      title: "Database",
+      bgColor: "var(--skills-background-color)",
+      skills: [
+        {
+          name: "SQL",
+          icon: sqlLogo,
+          percentage: 80,
+        },
+        {
+          name: "MongoDB",
+          icon: mongoLogo,
+          percentage: 85,
+        },
+      ],
     },
     {
-      name: "JavaScript",
-      icon: jsLogo,
-      percentage: 80,
-    },
-    {
-      name: "React",
-      icon: reactLogo,
-      percentage: 70,
-    },
-    {
-      name: "Java",
-      icon: javaLogo,
-      percentage: 90,
-    },
-    {
-      name: "Node.js",
-      icon: nodeLogo,
-      percentage: 90,
-    },
-    {
-      name: "Express.js",
-      icon: expressLogo,
-      percentage: 95,
-    },
-    {
-      name: "SQL",
-      icon: sqlLogo,
-      percentage: 80,
-    },
-    {
-      name: "MongoDB",
-      icon: mongoLogo,
-      percentage: 85,
-    },
-    {
-      name: "Git/Github",
-      icon: gitLogo,
-      percentage: 70,
+      title: "Version Control",
+      bgColor: "var(--skills-background-color)",
+      skills: [
+        {
+          name: "Git/Github",
+          icon: gitLogo,
+          percentage: 70,
+        },
+      ],
     },
   ];
 
   return (
     <section
       id="skills"
-      className="scroll-mt-20"
+      className="scroll-mt-20 mt-20"
       style={{ color: "var(--text-color" }}
     >
       {/* <hr />
@@ -136,23 +160,30 @@ function Skills() {
       {/* <br/>
       <hr /> */}
       {/* <div className="flex flex-col md:flex-row gap-30"> */}
-        {/* <div>
+      {/* <div>
           <img
             className="hidden md:block w-90 h-70 mt-[50%]"
             src={skillsGirlImage}
             alt=""
           />
         </div> */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center mt-10 gap-6">
-          {skills.map(({ name, icon, percentage }) => (
-            <CircularProgress
-              key={name}
-              skill={name}
-              icon={icon}
-              percentage={percentage}
-            />
-          ))}
-        </div>
+      <div className="mt-10 space-y-10">
+        {skillsCategories.map(({ title, bgColor, skills }) => (
+          <div key={title} className="p-6 rounded-xl shadow-md flex flex-col items-center w-full max-w-md md:max-w-lg lg:max-w-4xl mx-auto" style={{backgroundColor: "var(--card-background-color)", color:"var(--card-text-color)"}}>
+            <h2 className="font-medium text-xl text-center mb-4" >{title}</h2>
+            <div className={`flex flex-wrap gap-4 w-full justify-center mt-6 ${skills.length>=4?"grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4":""}`}>
+              {skills.map(({ name, icon, percentage }) => (
+                <CircularProgress
+                  key={name}
+                  skill={name}
+                  icon={icon}
+                  percentage={percentage}
+                />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
       {/* </div> */}
     </section>
   );

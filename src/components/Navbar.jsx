@@ -36,6 +36,10 @@ function Navbar() {
       link: "Skills",
     },
     {
+      id: "education",
+      link: "Education"
+    },
+    {
       id: "contact",
       link: "Contact Me",
     },
@@ -68,19 +72,20 @@ function Navbar() {
           className="gap-10 hidden md:flex text-[var(--text-color)]"
         >
           {links.map(({ id, link, sectionId }) => (
-            <li className="font-bold p-3 pb-3 cursor-pointer text-xl" key={id} onClick={()=>scrollToSection(id)}>
+            <li className="font-bold p-3 pb-3 cursor-pointer text-xl hover:text-[var(--nav-hover-text-color)]" key={id} onClick={()=>scrollToSection(id)}>
               {link}
             </li>
           ))}
         </ul>
 
+        {/* mobile view */}
         {nav && (
           <ul
             className="flex flex-col justify-between items-center absolute top-0 left-0 w-50 py-10 z-40 space-y-6 text-white backdrop-blur-md bg-[var(--dropdown-color)]"
             // style={{backgroundColor:"rgba(90,54,32,0.7)"}}
           >
             {links.map(({ id, link }) => (
-              <li className="px-4 cursor-pointer py-2 text-xl" key={id} onClick={()=>scrollToSection(id)}>
+              <li className="px-4 cursor-pointer py-2 text-xl hover:text-[var(--dropdown-hover-text-color)]" key={id} onClick={()=>scrollToSection(id)}>
                 {link}
               </li>
             ))}
