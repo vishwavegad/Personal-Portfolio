@@ -10,14 +10,14 @@ function Education() {
             score: "8.57"
         },
         {
-            year: "2022",
+            year: "2021 - 2022",
             degree: "Higher Secondary",
             school: "Swastik School of Science",
             type: "Percentage",
             score: "71.07"
         },
         {
-            year: "2020",
+            year: "2019 - 2020",
             degree: "Secondary School",
             school: "Sadhu Vaswani School for Girls",
             type: "Percentage",

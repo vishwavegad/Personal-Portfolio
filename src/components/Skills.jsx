@@ -6,6 +6,7 @@ import cssLogo from "../assets/cssLogo.svg";
 import tailwindLogo from "../assets/tailwindLogo.svg";
 import jsLogo from "../assets/jsLogo.svg";
 import reactLogo from "../assets/reactLogo.svg";
+import cLogo from "../assets/cLogo.svg";
 import javaLogo from "../assets/javaLogo.svg";
 import nodeLogo from "../assets/nodeLogo.svg";
 import expressLogoLight from "../assets/expressLogoLight.svg";
@@ -89,7 +90,7 @@ function Skills() {
         {
           name: "JavaScript",
           icon: jsLogo,
-          percentage: 80,
+          percentage: 70,
         },
         {
           name: "React",
@@ -102,6 +103,11 @@ function Skills() {
       title: "Backend Technologies",
       bgColor: "var(--skills-background-color)",
       skills: [
+        {
+          name: "C",
+          icon: cLogo,
+          percentage: 95,
+        },
         {
           name: "Java",
           icon: javaLogo,
@@ -136,7 +142,7 @@ function Skills() {
       ],
     },
     {
-      title: "Version Control",
+      title: "Other Tools",
       bgColor: "var(--skills-background-color)",
       skills: [
         {

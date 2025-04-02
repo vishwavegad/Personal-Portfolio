@@ -9,6 +9,7 @@ html, body{
     --background-color: #fff;
     --btn-color: rgb(90, 54, 32);
     --btn-text-color: #fff;
+    --btn-hover-color: rgb(64, 37, 20);
     --text-color: rgb(90, 54, 32);
     --nav-color: #fff;
     --nav-hover-text-color: rgb(90, 54, 32, 0.7);
@@ -27,6 +28,7 @@ html, body{
     --background-color: #292929;
     --btn-color: #fff;
     --btn-text-color: #222;
+    --btn-hover-color: #bdb6b6;
     --text-color: #fff;
     --nav-color: #292929;
     --nav-hover-text-color: rgba(250, 247, 247, 0.3);

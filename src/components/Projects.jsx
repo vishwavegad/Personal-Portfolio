@@ -19,7 +19,7 @@ function Projects() {
       image: smsImage,
       link: "",
       description: " A web application designed to streamline residential community management. It offers features like announcements, complaint tracking, maintenance requests, visitor management, and secure authentication. Built with HTML, CSS, JavaScript, Node.js, Express.js, and MongoDB, it ensures efficient communication and organization within societies.",
-      codeLink: "",
+      codeLink: "https://github.com/vishwavegad/Society-Management",
     },
     {
       name: "Currency Converter",
@@ -27,7 +27,7 @@ function Projects() {
       link: "https://currency-converter-pr.netlify.app/",
       description:
         "A simple currency converter that provides real-time exchange rates. Built using HTML, CSS, JavaScript and ExchangeRateAPI, it offers seamless currency conversion between different international currencies.",
-      codeLink: "",
+      codeLink: "https://github.com/vishwavegad/Currency-Converter",
     },
     {
       name: "Weather Forecast Website",
@@ -56,8 +56,9 @@ function Projects() {
               >
                 {name}
               </h2>
+              {/* <p className="text-sm">Tap for Live Demo</p> */}
               <a href={link} target="_blank">
-                <img src={image} alt="" className="size-40 rounded-2xl mt-4 mb-6" />
+                <img src={image} alt="" className="size-40 rounded-2xl mb-6 mt-6" />
               </a>
               <p className={`text-sm w-80 text-center ${isExpanded?"":"h-20 overflow-hidden"}`}>
                 {isExpanded?description:shortText}
