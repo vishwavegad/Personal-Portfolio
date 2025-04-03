@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import dropdownIconLight from "../assets/dropdownIconLight.svg";
 import dropdownIconDark from "../assets/dropdownIconDark.svg";
-import crossIconLight from "../assets/crossIconlight.png";
+import crossIconLight from "../assets/crossIconLight.png";
 import crossIconDark from "../assets/crossIcondark.png";
 import { useTheme } from "../common/ThemeContext";
 
