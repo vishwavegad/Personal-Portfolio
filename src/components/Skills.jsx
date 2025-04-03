@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Skills.css";
-import skillsGirlImage from "../assets/SkillsGirlImage.png";
 import htmlLogo from "../assets/htmlLogo.svg";
 import cssLogo from "../assets/cssLogo.svg";
 import tailwindLogo from "../assets/tailwindLogo.svg";
 import jsLogo from "../assets/jsLogo.svg";
 import reactLogo from "../assets/reactLogo.svg";
-import cLogo from "../assets/cLogo.svg";
 import javaLogo from "../assets/javaLogo.svg";
 import nodeLogo from "../assets/nodeLogo.svg";
 import expressLogoLight from "../assets/expressLogoLight.svg";
@@ -104,11 +102,6 @@ function Skills() {
       bgColor: "var(--skills-background-color)",
       skills: [
         {
-          name: "C",
-          icon: cLogo,
-          percentage: 95,
-        },
-        {
           name: "Java",
           icon: javaLogo,
           percentage: 90,
@@ -160,22 +153,10 @@ function Skills() {
       className="scroll-mt-20 mt-20"
       style={{ color: "var(--text-color" }}
     >
-      {/* <hr />
-      <br/> */}
       <h1 className="font-bold text-3xl md:text-4xl text-center">Skills</h1>
-      {/* <br/>
-      <hr /> */}
-      {/* <div className="flex flex-col md:flex-row gap-30"> */}
-      {/* <div>
-          <img
-            className="hidden md:block w-90 h-70 mt-[50%]"
-            src={skillsGirlImage}
-            alt=""
-          />
-        </div> */}
       <div className="mt-10 space-y-10">
         {skillsCategories.map(({ title, bgColor, skills }) => (
-          <div key={title} className="p-6 rounded-xl shadow-md flex flex-col items-center w-full max-w-md md:max-w-lg lg:max-w-4xl mx-auto" style={{backgroundColor: "var(--card-background-color)", color:"var(--card-text-color)"}}>
+          <div key={title} className="p-6 rounded-xl shadow-md flex flex-col items-center w-full max-w-xs sm:max-w-lg md:max-w-3xl lg:max-w-5xl mx-auto group" style={{backgroundColor: "var(--card-background-color)", color:"var(--card-text-color)"}}>
             <h2 className="font-medium text-xl text-center mb-4" >{title}</h2>
             <div className={`flex flex-wrap gap-4 w-full justify-center mt-6 ${skills.length>=4?"grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4":""}`}>
               {skills.map(({ name, icon, percentage }) => (
@@ -190,128 +171,8 @@ function Skills() {
           </div>
         ))}
       </div>
-      {/* </div> */}
     </section>
   );
-  // return (
-  //   <section
-  //     id="skills"
-  //     className="scroll-mt-20"
-  //     style={{ color: "var(--text-color" }}
-  //   >
-  //     <h1 className="font-bold text-3xl md:text-4xl text-center">Skills</h1>
-  //     <div className="flex flex-col justify-center items-center mt-10 gap-6">
-  //       <div className="flex flex-col md:flex-row md:gap-50">
-  //         <ul>
-  //           <li>
-  //             <div className="flex">
-  //               <img className="size-6 mr-2" src={htmlLogo} alt="" />
-  //               <span>HTML</span>
-  //             </div>
-  //             <div className={`bar html ${animation ? "animation" : ""}`}></div>
-  //           </li>
-  //           <li>
-  //             <div className="flex">
-  //               <img className="size-6 mr-2 mt-1" src={cssLogo} alt="" />
-  //               <span className="mt-1">CSS</span>
-  //             </div>
-  //             <div className={`bar css ${animation ? "animation" : ""}`}></div>
-  //           </li>
-  //           <li>
-  //             <div className="flex">
-  //               <img className="size-5 mr-2 mt-1.5" src={tailwindLogo} alt="" />
-  //               <span className="mt-1">Tailwind CSS</span>
-  //             </div>
-  //             <div
-  //               className={`bar tailwind ${animation ? "animation" : ""}`}
-  //             ></div>
-  //           </li>
-  //           <li>
-  //             <div className="flex">
-  //               <img className="size-5 mr-2 mt-1.5" src={jsLogo} alt="" />
-  //               <span className="mt-1">JavaScript</span>
-  //             </div>
-  //             <div
-  //               className={`bar javascript ${animation ? "animation" : ""}`}
-  //             ></div>
-  //           </li>
-  //           <li>
-  //             <div className="flex">
-  //               <img className="size-6 mr-2" src={javaLogo} alt="" />
-  //               <span>Java</span>
-  //             </div>
-  //             <div className={`bar java ${animation ? "animation" : ""}`}></div>
-  //           </li>
-  //           <li>
-  //             <div className="flex">
-  //               <img className="size-5 mr-2 mt-1.5" src={nodeLogo} alt="" />
-  //               <span className="mt-1">Node Js</span>
-  //             </div>
-  //             <div className={`bar node ${animation ? "animation" : ""}`}></div>
-  //           </li>
-  //           <li>
-  //             <div className="flex">
-  //               <img className="size-5 mr-2 mt-1.5" src={expressLogo} alt="" />
-  //               <span className="mt-1">Express Js</span>
-  //             </div>
-  //             <div
-  //               className={`bar express ${animation ? "animation" : ""}`}
-  //             ></div>
-  //           </li>
-  //           <li>
-  //             <div className="flex">
-  //               <img className="size-5 mr-2" src={sqlLogo} alt="" />
-  //               <span>SQL</span>
-  //             </div>
-  //             <div
-  //               className={`bar mysql ${animation ? "animation" : ""}`}
-  //             ></div>
-  //           </li>
-  //           <li>
-  //             <div className="flex">
-  //               <img className="size-5 mr-2 mt-1.5" src={mongoLogo} alt="" />
-  //               <span className="mt-1">MongoDB</span>
-  //             </div>
-  //             <div
-  //               className={`bar mongodb ${animation ? "animation" : ""}`}
-  //             ></div>
-  //           </li>
-  //           <li>
-  //             <div className="flex">
-  //               <img className="size-6 mr-2" src={gitLogo} alt="" />
-  //               <span>Git/Github</span>
-  //             </div>
-  //             <div className={`bar git ${animation ? "animation" : ""}`}></div>
-  //           </li>
-  //         </ul>
-  //         </div>
-  //         {/* <div>
-  //           <h2 className="font-bold underline underline-offset-5 text-xl flex flex-col items-center">Frontend Technologies</h2>
-  //           <div className="mt-8 flex flex-col items-center"></div>
-  //         </div>
-  //         <div className="mt-8 md:mt-0">
-  //           <h2 className="font-bold underline underline-offset-5 text-xl flex flex-col items-center">Backend Technologies</h2>
-  //           <div className="mt-8 flex flex-col items-center">
-  //             <ul></ul>
-  //           </div>
-  //         </div> */}
-  //       {/* <div className="flex flex-col md:flex-row md:gap-50 md:mt-10">
-  //         <div>
-  //           <h2 className="font-bold underline underline-offset-5 text-xl flex flex-col items-center">Database</h2>
-  //           <div className="mt-8 flex flex-col items-center">
-  //             <ul></ul>
-  //           </div>
-  //         </div>
-  //         <div>
-  //           <h2 className="font-bold underline underline-offset-5 text-xl flex flex-col items-center">Version Control</h2>
-  //           <div className="mt-8 flex flex-col items-center">
-  //             <ul></ul>
-  //           </div>
-  //         </div>
-  //       </div> */}
-  //     </div>
-  //   </section>
-  // );
 }
 
 export default Skills;

@@ -6,11 +6,7 @@
     position: relative;
     overflow: hidden;
     margin-top: 5px;
-    /* width: 200px; */
 }
-/* .bar:hover{
-    box-shadow: 2px solid brown;
-} */
 .bar::after{
     content: "";
     position: absolute;

@@ -5,7 +5,6 @@ import dropdownIconDark from "../assets/dropdownIconDark.svg";
 import crossIconLight from "../assets/crossIconlight.png";
 import crossIconDark from "../assets/crossIcondark.png";
 import { useTheme } from "../common/ThemeContext";
-// import {Menu} from "antd"
 
 function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -26,6 +25,10 @@ function Navbar() {
     {
       id: "home",
       link: "Home",
+    },
+    {
+      id:"aboutme",
+      link: "About Me"
     },
     {
       id: "projects",
@@ -82,7 +85,6 @@ function Navbar() {
         {nav && (
           <ul
             className="flex flex-col justify-between items-center absolute top-0 left-0 w-50 py-10 z-40 space-y-6 text-white backdrop-blur-md bg-[var(--dropdown-color)]"
-            // style={{backgroundColor:"rgba(90,54,32,0.7)"}}
           >
             {links.map(({ id, link }) => (
               <li className="px-4 cursor-pointer py-2 text-xl hover:text-[var(--dropdown-hover-text-color)]" key={id} onClick={()=>scrollToSection(id)}>

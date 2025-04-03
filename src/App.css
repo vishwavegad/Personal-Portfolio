@@ -13,9 +13,10 @@ html, body{
     --text-color: rgb(90, 54, 32);
     --nav-color: #fff;
     --nav-hover-text-color: rgb(90, 54, 32, 0.7);
-    --dropdown-color: rgb(90, 54, 32, 0.7);
+    --dropdown-color: rgb(90, 54, 32);
     --dropdown-hover-text-color: rgb(90, 54, 32);
     --projects-read-text-color: rgb(156, 102, 68);
+    --projects-hover-background-color: rgba(84, 54, 33, 0.7);
     --card-background-color: rgb(199, 176, 161);
     --card-text-color: rgb(90, 54, 32);
     --education-bullet-color: rgb(90, 54, 32);
@@ -35,6 +36,7 @@ html, body{
     --dropdown-color: #222;
     --dropdown-hover-text-color: rgba(250, 247, 247, 0.3);
     --projects-read-text-color: rgba(250, 247, 247, 0.3);
+    --projects-hover-background-color: rgba(8, 8, 8, 0.7);
     /* --skills-background-color: rgba(250, 247, 247, 0.3); */
     --card-background-color: rgb(27, 26, 26);
     /* --skills-text-color: #222; */
