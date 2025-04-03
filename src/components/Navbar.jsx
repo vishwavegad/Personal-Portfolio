@@ -3,7 +3,7 @@ import { useState } from "react";
 import dropdownIconLight from "../assets/dropdownIconLight.svg";
 import dropdownIconDark from "../assets/dropdownIconDark.svg";
 import crossIconLight from "../assets/crossIconLight.png";
-import crossIconDark from "../assets/crossIcondark.png";
+import crossIconDark from "../assets/crossIconDark.png";
 import { useTheme } from "../common/ThemeContext";
 
 function Navbar() {
