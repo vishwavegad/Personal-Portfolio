@@ -3,7 +3,7 @@ import aboutmeImage from "../assets/aboutmeImage.jpeg";
 
 function AboutMe() {
   return (
-    <section id="aboutme" className="scroll-mt-20 mt-20">
+    <section id="aboutme" className="scroll-mt-10 sm:scroll-mt-20 mt-20">
       <h1 className="font-bold text-3xl md:text-4xl text-center">About Me</h1>
       <div className="text-sm mt-10 text-center p-5 bg-[var(--card-background-color)] rounded-xl mx-auto shadow-md max-w-xs sm:max-w-lg md:max-w-3xl lg:max-w-5xl flex flex-col md:flex-row-reverse md:gap-10">
         <div className="flex justify-center mt-5 mb-5">
@@ -30,6 +30,8 @@ function AboutMe() {
             professionals. I believe in continuous learning, creativity, and the
             power of technology to drive meaningful change.
           </p>
+          <br />
+          <br />
           <br />
           <p>
             <b>Let’s connect and create something extraordinary!</b>

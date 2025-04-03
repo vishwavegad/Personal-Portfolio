@@ -20,7 +20,8 @@ function Projects() {
       image: smsImage,
       link: "",
       description:
-        " A web application designed to streamline residential community management. It offers features like announcements, complaint tracking, maintenance requests, visitor management, and secure authentication. Built with HTML, CSS, JavaScript, Node.js, Express.js, and MongoDB, it ensures efficient communication and organization within societies.",
+        "In Progress....A web application designed to streamline residential community management. It offers features like announcements, complaint tracking, maintenance requests, visitor management, and secure authentication. It ensures efficient communication and organization within societies.",
+      techstack: "HTML, CSS, JavaScript, Node.js, Express.js and MongoDB",
       codeLink: "https://github.com/vishwavegad/Society-Management",
     },
     {
@@ -28,7 +29,8 @@ function Projects() {
       image: currencyConverterImage,
       link: "https://currency-converter-pr.netlify.app/",
       description:
-        "A simple currency converter that provides real-time exchange rates. Built using HTML, CSS, JavaScript and ExchangeRateAPI, it offers seamless currency conversion between different international currencies.",
+        "A simple currency converter that provides real-time exchange rates. It offers seamless currency conversion between different international currencies.",
+      techstack: "HTML, CSS, JavaScript and ExchangeRateAPI",
       codeLink: "https://github.com/vishwavegad/Currency-Converter",
     },
     {
@@ -36,17 +38,18 @@ function Projects() {
       image: weatherAppImage,
       link: "https://weatherpr.netlify.app/",
       description:
-        "A weather forecasting web application that fetches real-time weather data based on user location or manual search. Built using HTML, CSS, JavaScript and WeatherAPI for accurate weather updates.",
+        "A weather forecasting web application that fetches real-time weather data based on user location or manual search.",
+        techstack: "HTML, CSS, JavaScript and WeatherAPI",
       codeLink: "",
     },
   ];
 
   return (
-    <section id="projects" className="scroll-mt-20 mt-20">
+    <section id="projects" className="scroll-mt-10 sm:scroll-mt-20 mt-20">
       <h1 className="font-bold text-3xl md:text-4xl text-center">Projects</h1>
       <div className="flex justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 place-items-center mt-10 gap-6 items-start">
-          {projects.map(({ name, image, link, description, codeLink }) => {
+          {projects.map(({ name, image, link, description, techstack, codeLink }) => {
             const isExpanded = expanded[name];
             const shortText = description.slice(0, 100) + "...";
 
@@ -80,10 +83,11 @@ function Projects() {
                 </p>
                 <button
                   onClick={() => toggleExpand(name)}
-                  className="text-[var(--projects-read-text-color)] hover:text-blue-700"
+                  className="mb-3 text-[var(--projects-read-text-color)] hover:text-blue-700"
                 >
                   {isExpanded ? "Read Less" : "Read More"}
                 </button>
+                <p className="text-xs w-70 sm:text-sm text-center"><b></b>TechStack: {techstack}</p>
                 <a href={codeLink}>
                   <button className="rounded-3xl w-20 p-1 mt-5 mb-10 text-center bg-[var(--btn-color)] text-[var(--btn-text-color)] hover:bg-[var(--btn-hover-color)]">
                     Code

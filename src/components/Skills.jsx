@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./Skills.css";
 import htmlLogo from "../assets/htmlLogo.svg";
 import cssLogo from "../assets/cssLogo.svg";
 import tailwindLogo from "../assets/tailwindLogo.svg";
@@ -150,7 +149,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="scroll-mt-20 mt-20"
+      className="scroll-mt-10 sm:scroll-mt-20 mt-20"
       style={{ color: "var(--text-color" }}
     >
       <h1 className="font-bold text-3xl md:text-4xl text-center">Skills</h1>

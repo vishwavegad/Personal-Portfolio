@@ -26,7 +26,7 @@ function Education() {
     ]
 
   return (
-    <section id='education' className='scroll-mt-20 mt-20'>
+    <section id='education' className="scroll-mt-10 sm:scroll-mt-20 mt-20">
       <h1 className='font-bold text-3xl md:text-4xl text-center'>Education</h1>
       <div className='flex flex-col justify-center mt-10 bg-[var(--card-background-color)] rounded-xl mx-auto shadow-md text-xs sm:text-sm w-full max-w-xs sm:max-w-lg md:max-w-3xl lg:max-w-5xl'>
         <div className='ml-6 mt-10 mb-6 relative border-l-3 border-[var(--text-color)] pl-6'>

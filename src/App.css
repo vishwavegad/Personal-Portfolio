@@ -14,7 +14,7 @@ html, body{
     --nav-color: #fff;
     --nav-hover-text-color: rgb(90, 54, 32, 0.7);
     --dropdown-color: rgb(90, 54, 32);
-    --dropdown-hover-text-color: rgb(90, 54, 32);
+    --dropdown-hover-text-color: rgba(225, 201, 186, 0.7);
     --projects-read-text-color: rgb(156, 102, 68);
     --projects-hover-background-color: rgba(84, 54, 33, 0.7);
     --card-background-color: rgb(199, 176, 161);
