@@ -40,7 +40,7 @@ function Projects() {
       description:
         "A weather forecasting web application that fetches real-time weather data based on user location or manual search.",
         techstack: "HTML, CSS, JavaScript and WeatherAPI",
-      codeLink: "",
+      codeLink: "https://github.com/vishwavegad/Weather-Forecast",
     },
   ];
 
@@ -88,7 +88,7 @@ function Projects() {
                   {isExpanded ? "Read Less" : "Read More"}
                 </button>
                 <p className="text-xs w-70 sm:text-sm text-center"><b></b>TechStack: {techstack}</p>
-                <a href={codeLink}>
+                <a href={codeLink} target="_blank">
                   <button className="rounded-3xl w-20 p-1 mt-5 mb-10 text-center bg-[var(--btn-color)] text-[var(--btn-text-color)] hover:bg-[var(--btn-hover-color)]">
                     Code
                   </button>
