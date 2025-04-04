@@ -5,10 +5,8 @@ import sun from '../assets/sun.svg'
 import moon from '../assets/moon.png'
 import githublight from '../assets/githublight.svg'
 import linkedinlight from '../assets/linkedinlight.svg'
-import leetcodelight from '../assets/leetcodelight.svg'
 import githubdark from '../assets/githubdark.svg'
 import linkedindark from '../assets/linkedindark.svg'
-import leetcodedark from '../assets/leetcodedark.svg'
 import Resume from '../assets/Vishwa Vegad.pdf'
 import {useTheme} from '../common/ThemeContext'
 
@@ -17,7 +15,6 @@ function HeroSection() {
     const themeIcon = theme==='light'?sun:moon;
     const githubIcon = theme==='light'?githublight:githubdark;
     const linkedinIcon = theme==='light'?linkedinlight:linkedindark;
-    const leetcodeIcon = theme==='light'?leetcodelight:leetcodedark;
 
   return (
     <main id='home' className='flex justify-center scroll-mt-20'>
