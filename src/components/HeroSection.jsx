@@ -35,9 +35,8 @@ function HeroSection() {
                     <TypeAnimation
                         sequence={[
                             "Full Stack Developer", 2000, '', 500,
-                            "Frontend Developer", 2000, '', 500,
-                            "Backend Developer", 2000, '', 500,
                             "Problem Solver", 2000, '', 500,
+                            "MERN Stack Developer", 2000, '', 500,
                         ]}
                         wrapper='span'
                         speed={50}

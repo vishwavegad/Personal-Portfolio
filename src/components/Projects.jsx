@@ -65,10 +65,10 @@ function Projects() {
                   <img
                     src={image}
                     alt=""
-                    className="size-40 rounded-2xl mb-6 mt-6"
+                    className="w-64 h-auto max-h-48 object-cover rounded-2xl mb-6 mt-6"
                   />
                   {link && (
-                    <a href={link} target="_blank" className="absolute inset-0 flex justify-center items-center size-40 mt-6 bg-[var(--projects-hover-background-color)] bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl">
+                    <a href={link} target="_blank" className="absolute inset-0 flex justify-center items-center w-64 h-auto max-h-48 mt-6 mb-6 bg-[var(--projects-hover-background-color)] bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl">
                       <img src={externalLinkImage} alt="External Link Icon" className="w-10 h-10" />
                     </a>
                   )}
