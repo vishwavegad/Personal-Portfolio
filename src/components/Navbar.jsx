@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, {useState, useRef, useEffect} from "react";
 import dropdownIconLight from "../assets/dropdownIconLight.svg";
 import dropdownIconDark from "../assets/dropdownIconDark.svg";
 import crossIconLight from "../assets/crossIconLight.png";
@@ -12,6 +11,7 @@ function Navbar() {
   const crossIcon = theme === "light" ? crossIconLight : crossIconDark;
 
   const [nav, setNav] = useState(false);
+  const mobileMenuRef = useRef(null);
 
   const scrollToSection = (id)=>{
     const section = document.getElementById(id);
@@ -47,6 +47,23 @@ function Navbar() {
       link: "Contact Me",
     },
   ];
+
+  useEffect(()=>{
+    const handleClickOutside = (event)=>{
+      if(mobileMenuRef.current && !mobileMenuRef.current.contains(event.target))
+      {
+        setNav(false);
+      }
+    }
+    if(nav)
+    {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return()=>{
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [nav]);
+
   return (
     <section className="fixed top-0 left-0 w-full z-50">
       <div
@@ -84,10 +101,11 @@ function Navbar() {
         {/* mobile view */}
         {nav && (
           <ul
-            className="flex flex-col justify-between items-center absolute top-0 left-0 w-50 py-10 z-40 space-y-6 text-white backdrop-blur-md bg-[var(--dropdown-color)]"
+            ref={mobileMenuRef}
+            className="flex flex-col justify-between items-center absolute top-0 left-0 w-70 py-10 z-40 space-y-2 text-white backdrop-blur-md bg-[var(--dropdown-color)]"
           >
             {links.map(({ id, link }) => (
-              <li className="px-4 cursor-pointer py-2 text-xl hover:text-[var(--dropdown-hover-text-color)]" key={id} onClick={()=>scrollToSection(id)}>
+              <li className="px-4 cursor-pointer py-4 text-xl hover:text-[var(--dropdown-hover-text-color)]" key={id} onClick={()=>scrollToSection(id)}>
                 {link}
               </li>
             ))}

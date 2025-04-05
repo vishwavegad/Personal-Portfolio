@@ -10,7 +10,7 @@ function AboutMe() {
           <img
             src={aboutmeImage}
             alt=""
-            className="w-60 h-80 md:w-200 md:h-100 rounded-2xl"
+            className="w-60 h-90 md:w-200 md:h-80 md:mt-8 lg:w-150 lg:h-80 lg:mt-1 rounded-2xl"
           />
         </div>
         <div className="mt-5 mb-5 flex flex-col justify-between">
@@ -23,8 +23,7 @@ function AboutMe() {
             </p>
             <br />
             <p>
-              Lately, I’ve been working with <b>JavaScript</b>, <b>React</b>,{" "}
-              <b>Node.js</b>, and <b>MongoDB</b> — building things like a
+              Lately, I’ve been working with <b>JavaScript</b>, <b>React</b>, <b>Node.js</b>, and <b>MongoDB</b> — building things like a
               society management system and personal portfolio site. I enjoy
               figuring out how to make things work better and faster, especially
               when it helps users have a smoother experience.
