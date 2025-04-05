@@ -17,6 +17,7 @@ function Projects() {
   const projects = [
     {
       name: "Society Management",
+      text: "Live Demo currently unavailable",
       image: smsImage,
       link: "",
       description:
@@ -26,6 +27,7 @@ function Projects() {
     },
     {
       name: "Currency Converter",
+      text: "Click the image for Live Demo",
       image: currencyConverterImage,
       link: "https://currency-converter-pr.netlify.app/",
       description:
@@ -35,6 +37,7 @@ function Projects() {
     },
     {
       name: "Weather Forecast Website",
+      text: "Click the image for Live Demo",
       image: weatherAppImage,
       link: "https://weatherpr.netlify.app/",
       description:
@@ -49,7 +52,7 @@ function Projects() {
       <h1 className="font-bold text-3xl md:text-4xl text-center">Projects</h1>
       <div className="flex justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 place-items-center mt-10 gap-6 items-start">
-          {projects.map(({ name, image, link, description, techstack, codeLink }) => {
+          {projects.map(({ name, text, image, link, description, techstack, codeLink }) => {
             const isExpanded = expanded[name];
             const shortText = description.slice(0, 100) + "...";
 
@@ -61,11 +64,12 @@ function Projects() {
                 <h2 className="font-medium text-md sm:text-lg md:text-xl text-[var(--text-color)]">
                   {name}
                 </h2>
+                <span className="text-xs mt-2 text-[var(--text-color)]">{text}</span>
                 <div className="relative group">
                   <img
                     src={image}
                     alt=""
-                    className="w-64 h-auto max-h-48 object-cover rounded-2xl mb-6 mt-6"
+                    className="w-64 h-auto max-h-48 object-cover rounded-2xl mb-6 mt-2"
                   />
                   {link && (
                     <a href={link} target="_blank" className="absolute inset-0 flex justify-center items-center w-64 h-auto max-h-48 mt-6 mb-6 bg-[var(--projects-hover-background-color)] bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl">
