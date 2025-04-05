@@ -10,7 +10,7 @@ function AboutMe() {
           <img
             src={aboutmeImage}
             alt=""
-            className="w-60 h-90 md:w-200 md:h-80 md:mt-8 lg:w-150 lg:h-80 lg:mt-1 rounded-2xl"
+            className="w-60 h-90 md:w-160 md:h-60 md:mt-12 lg:w-180 lg:h-80 lg:mt-1 lg:mb-1 rounded-2xl"
           />
         </div>
         <div className="mt-5 mb-5 flex flex-col justify-between">
