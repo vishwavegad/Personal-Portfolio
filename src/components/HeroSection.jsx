@@ -20,7 +20,7 @@ function HeroSection() {
     <main id='home' className='flex justify-center scroll-mt-20'>
         <section className='flex flex-col md:flex-row items-center justify-center gap-5 md:gap-40 text-center md:text-left min-h-screen max-w-5xl mx-auto px-4'>
             <div className='w-full md:w-1/2 flex justify-center pt-5'>
-                <img className='size-60 md:size-80 rounded-full ml-6' src={heroImage} alt='Profile Picture of Vishwa Vegad' />
+                <img className='size-50 md:size-80 rounded-full ml-6' src={heroImage} alt='Profile Picture of Vishwa Vegad' />
                 <img className='size-8 md:size-10 hover:cursor-pointer' src={themeIcon} alt='theme icon' onClick={toggleTheme} />
             </div>
             <div className='w-full md:w-1/2 flex flex-col gap-5'>
