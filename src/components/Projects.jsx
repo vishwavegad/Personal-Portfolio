@@ -59,8 +59,9 @@ function Projects() {
             return (
               <div
                 key={name}
-                className="relative flex flex-col items-center justify-center p-8 rounded-xl shadow-md w-full max-w-xs sm:max-w-lg md:max-w-3xl lg:max-w-4xl mx-auto bg-[var(--card-background-color)]"
+                className="relative flex flex-col justify-between items-center p-8 rounded-xl shadow-md w-full max-w-xs sm:max-w-lg md:max-w-3xl lg:max-w-4xl mx-auto bg-[var(--card-background-color)] min-h-[550px]"
               >
+                <div className="flex flex-col items-center">
                 <h2 className="font-medium text-md sm:text-lg md:text-xl text-[var(--text-color)]">
                   {name}
                 </h2>
@@ -72,7 +73,7 @@ function Projects() {
                     className="w-64 h-auto max-h-48 object-cover rounded-2xl mb-6 mt-2"
                   />
                   {link && (
-                    <a href={link} target="_blank" className="absolute inset-0 flex justify-center items-center w-64 h-auto max-h-48 mt-6 mb-6 bg-[var(--projects-hover-background-color)] bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl">
+                    <a href={link} target="_blank" className="absolute inset-0 flex justify-center items-center w-64 h-auto max-h-48 mt-2 mb-6 bg-[var(--projects-hover-background-color)] bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl">
                       <img src={externalLinkImage} alt="External Link Icon" className="w-10 h-10" />
                     </a>
                   )}
@@ -92,8 +93,9 @@ function Projects() {
                   {isExpanded ? "Read Less" : "Read More"}
                 </button>
                 <p className="text-xs w-70 sm:text-sm text-center"><b></b>TechStack: {techstack}</p>
+                </div>
                 <a href={codeLink} target="_blank">
-                  <button className="rounded-3xl w-20 p-1 mt-5 mb-10 text-center bg-[var(--btn-color)] text-[var(--btn-text-color)] hover:bg-[var(--btn-hover-color)]">
+                  <button className="rounded-3xl w-20 p-1 mt-5 text-center bg-[var(--btn-color)] text-[var(--btn-text-color)] hover:bg-[var(--btn-hover-color)]">
                     Code
                   </button>
                 </a>

@@ -17,7 +17,7 @@ function HeroSection() {
     const linkedinIcon = theme==='light'?linkedinlight:linkedindark;
 
   return (
-    <main id='home' className='flex justify-center scroll-mt-20'>
+    <main id='home' className='flex justify-center scroll-mt-15'>
         <section className='flex flex-col md:flex-row items-center justify-center gap-5 md:gap-40 text-center md:text-left min-h-screen max-w-5xl mx-auto px-4'>
             <div className='w-full md:w-1/2 flex justify-center pt-5'>
                 <img className='size-50 md:size-80 rounded-full ml-6' src={heroImage} alt='Profile Picture of Vishwa Vegad' />
