@@ -4,9 +4,11 @@ import heroImage from '../assets/heroImage.webp'
 import sun from '../assets/sun.svg'
 import moon from '../assets/moon.png'
 import githublight from '../assets/githublight.svg'
-import linkedinlight from '../assets/linkedinlight.svg'
 import githubdark from '../assets/githubdark.svg'
 import linkedindark from '../assets/linkedindark.svg'
+import linkedinlight from '../assets/linkedinlight.svg'
+import leetcodelight from '../assets/leetcodelight.svg'
+import leetcodedark from '../assets/leetcodedark.svg'
 import Resume from '../assets/Vishwa Vegad.pdf'
 import {useTheme} from '../common/ThemeContext'
 
@@ -15,6 +17,7 @@ function HeroSection() {
     const themeIcon = theme==='light'?sun:moon;
     const githubIcon = theme==='light'?githublight:githubdark;
     const linkedinIcon = theme==='light'?linkedinlight:linkedindark;
+    const leetcodeIcon = theme==='light'?leetcodelight:leetcodedark;
 
   return (
     <main id='home' className='flex justify-center scroll-mt-15'>
@@ -44,6 +47,7 @@ function HeroSection() {
                 <span className='flex justify-center md:justify-start gap-5'>
                     <a href="https://github.com/vishwavegad" target='_blank'><img className='w-8' src={githubIcon} /></a>
                     <a href="https://linkedin.com/in/vishwavegad" target='_blank'><img className='w-8' src={linkedinIcon} /></a>
+                    <a href="https://leetcode.com/u/vishwaavegad/" target='_blank'><img className='w-7' src={leetcodeIcon} /></a>
                 </span>
                 <p className='text-sm md:text-md font-medium w-80'>I build things, break things, and then fix them (hopefully before anyone notices), all while confidently saying 'it works on my machine.'<br/><br/>I love solving problems (and occasionally creating them).</p>
                 <a href={Resume} download>
