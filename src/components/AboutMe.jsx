@@ -14,7 +14,7 @@ function AboutMe() {
           />
         </div>
         <div className="mt-5 mb-5 flex flex-col justify-between">
-          <div>
+          <div className="text-left">
             <p>
               I’m <b>Vishwa</b>, a Computer Engineering student who enjoys
               turning complex ideas into functional web apps. I love
