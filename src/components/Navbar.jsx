@@ -11,7 +11,7 @@ function Navbar() {
   const crossIcon = theme === "light" ? crossIconLight : crossIconDark;
 
   const [nav, setNav] = useState(false);
-  const mobileMenuRef = useRef(null);
+  const wrapperRef = useRef(null);
 
   const scrollToSection = (id)=>{
     const section = document.getElementById(id);
@@ -50,7 +50,7 @@ function Navbar() {
 
   useEffect(()=>{
     const handleClickOutside = (event)=>{
-      if(mobileMenuRef.current && !mobileMenuRef.current.contains(event.target))
+      if(wrapperRef.current && !wrapperRef.current.contains(event.target))
       {
         setNav(false);
       }
@@ -69,9 +69,13 @@ function Navbar() {
       <div
         className="relative w-full flex items-center justify-center px-4 h-full bg-[var(--nav-color)]"
       >
+        <div ref={wrapperRef}>
         <div
-          onClick={() => setNav(!nav)}
-          className="absolute left-4 top-4 z-50 sm-block md:hidden"
+          onClick={(e) => {
+            e.stopPropagation();
+            setNav(!nav)}
+          }
+          className="absolute z-50 top-0 left-0 p-2 pb-3 bg-[var(--background-color)] h-12 w-full md:hidden flex justify-between"
         >
           {nav ? (
             <img
@@ -86,6 +90,9 @@ function Navbar() {
               className="size-10 hover:cursor-pointer"
             />
           )}
+          <p className="text-xl">
+            Vishwa
+          </p>
         </div>
 
         <ul
@@ -97,15 +104,15 @@ function Navbar() {
             </li>
           ))}
         </ul>
+        </div>
 
         {/* mobile view */}
         {nav && (
           <ul
-            ref={mobileMenuRef}
-            className="flex flex-col justify-between items-center absolute top-0 left-0 w-70 py-10 z-40 space-y-2 text-white backdrop-blur-md bg-[var(--dropdown-color)]"
+            className="flex flex-col justify-between items-center absolute top-16 left-6 w-80 py-10 z-40 rounded-3xl space-y-2 text-white backdrop-blur-md bg-[var(--dropdown-color)]"
           >
             {links.map(({ id, link }) => (
-              <li className="px-4 cursor-pointer py-4 text-xl hover:text-[var(--dropdown-hover-text-color)]" key={id} onClick={()=>scrollToSection(id)}>
+              <li className="px-4 cursor-pointer py-4 text-2xl hover:text-[var(--dropdown-hover-text-color)]" key={id} onClick={()=>scrollToSection(id)}>
                 {link}
               </li>
             ))}

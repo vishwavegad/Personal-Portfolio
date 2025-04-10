@@ -1,6 +1,6 @@
 import React from 'react'
 import {TypeAnimation} from "react-type-animation"
-import heroImage from '../assets/WhatsApp Image 2025-04-08 at 1.07.00 (1) PM.jpeg'
+import heroImage from '../assets/heroImage3.jpeg'
 import sun from '../assets/sun.svg'
 import moon from '../assets/moon.png'
 import githublight from '../assets/githublight.svg'
@@ -23,7 +23,7 @@ function HeroSection() {
     <main id='home' className='flex justify-center scroll-mt-15'>
         <section className='flex flex-col md:flex-row items-center justify-center gap-5 md:gap-40 text-center md:text-left min-h-screen max-w-5xl mx-auto px-4'>
             <div className='w-full md:w-1/2 flex justify-center pt-5'>
-                <img className='h-60 w-50 md:h-90 md:w-70 rounded-full ml-6' src={heroImage} alt='Profile Picture of Vishwa Vegad' />
+                <img className='h-55 w-50 md:h-90 md:w-70 rounded-full ml-6' src={heroImage} alt='Profile Picture of Vishwa Vegad' />
                 <img className='size-8 md:size-10 hover:cursor-pointer' src={themeIcon} alt='theme icon' onClick={toggleTheme} />
             </div>
             <div className='w-full md:w-1/2 flex flex-col gap-5'>

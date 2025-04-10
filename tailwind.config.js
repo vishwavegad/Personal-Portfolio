@@ -8,6 +8,7 @@ export default {
       extend: {
         fontFamily: {
           rubik: ["Rubik", "Roboto Mono"],
+          title : ["Pacifico", "sans-serif"],
         }  
       },
     },
