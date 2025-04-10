@@ -11,7 +11,8 @@ function Navbar() {
   const crossIcon = theme === "light" ? crossIconLight : crossIconDark;
 
   const [nav, setNav] = useState(false);
-  const wrapperRef = useRef(null);
+  const dropdownRef = useRef(null);
+  const crossIconRef = useRef(null);
 
   const scrollToSection = (id)=>{
     const section = document.getElementById(id);
@@ -49,17 +50,21 @@ function Navbar() {
   ];
 
   useEffect(()=>{
+    let timeoutId;
     const handleClickOutside = (event)=>{
-      if(wrapperRef.current && !wrapperRef.current.contains(event.target))
+      if(dropdownRef.current && !dropdownRef.current.contains(event.target) && crossIconRef.current && !crossIconRef.current.contains(event.target))
       {
         setNav(false);
       }
     }
     if(nav)
     {
-      document.addEventListener("mousedown", handleClickOutside);
+      timeoutId = setTimeout(()=>{
+        document.addEventListener("mousedown", handleClickOutside);
+      }, 100)
     }
     return()=>{
+      clearTimeout(timeoutId);
       document.removeEventListener("mousedown", handleClickOutside)
     }
   }, [nav]);
@@ -69,32 +74,38 @@ function Navbar() {
       <div
         className="relative w-full flex items-center justify-center px-4 h-full bg-[var(--nav-color)]"
       >
-        <div ref={wrapperRef}>
         <div
-          onClick={(e) => {
-            e.stopPropagation();
-            setNav(!nav)}
-          }
-          className="absolute z-50 top-0 left-0 p-2 pb-3 bg-[var(--background-color)] h-12 w-full md:hidden flex justify-between"
+          // onClick={(e) => {
+          //   e.stopPropagation();
+          //   setNav(!nav)}
+          // }
+          className="absolute left-4 top-4 z-50 md:hidden"
         >
           {nav ? (
             <img
+              ref={crossIconRef}
               src={crossIcon}
               alt=""
               className="size-10 hover:cursor-pointer"
+              onClick={(e)=>{
+                e.stopPropagation();
+                setNav(false);
+              }}
             />
           ) : (
             <img
               src={dropdownIcon}
               alt=""
               className="size-10 hover:cursor-pointer"
+              onClick={(e)=>{
+                e.stopPropagation();
+                setNav(true);
+              }}
             />
           )}
-          <p className="text-xl">
-            Vishwa
-          </p>
         </div>
 
+          {/* Desktop View */}
         <ul
           className="gap-10 hidden md:flex text-[var(--text-color)]"
         >
@@ -104,15 +115,15 @@ function Navbar() {
             </li>
           ))}
         </ul>
-        </div>
 
         {/* mobile view */}
         {nav && (
           <ul
-            className="flex flex-col justify-between items-center absolute top-16 left-4 w-80 py-10 z-40 rounded-3xl space-y-2 text-white backdrop-blur-md bg-[var(--dropdown-color)]"
+            ref={dropdownRef}
+            className="flex flex-col justify-between items-center absolute top-0 left-0 w-70 py-10 z-40 space-y-2 text-white backdrop-blur-md bg-[var(--dropdown-color)]"
           >
             {links.map(({ id, link }) => (
-              <li className="px-4 cursor-pointer py-4 text-2xl hover:text-[var(--dropdown-hover-text-color)]" key={id} onClick={()=>scrollToSection(id)}>
+              <li className="px-4 cursor-pointer py-4 text-xl hover:text-[var(--dropdown-hover-text-color)]" key={id} onClick={()=>scrollToSection(id)}>
                 {link}
               </li>
             ))}
