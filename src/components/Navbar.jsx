@@ -109,7 +109,7 @@ function Navbar() {
         {/* mobile view */}
         {nav && (
           <ul
-            className="flex flex-col justify-between items-center absolute top-16 left-6 w-80 py-10 z-40 rounded-3xl space-y-2 text-white backdrop-blur-md bg-[var(--dropdown-color)]"
+            className="flex flex-col justify-between items-center absolute top-16 left-4 w-80 py-10 z-40 rounded-3xl space-y-2 text-white backdrop-blur-md bg-[var(--dropdown-color)]"
           >
             {links.map(({ id, link }) => (
               <li className="px-4 cursor-pointer py-4 text-2xl hover:text-[var(--dropdown-hover-text-color)]" key={id} onClick={()=>scrollToSection(id)}>
