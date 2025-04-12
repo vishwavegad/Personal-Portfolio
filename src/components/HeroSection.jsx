@@ -50,9 +50,14 @@ function HeroSection() {
                     <a href="https://leetcode.com/u/vishwaavegad/" target='_blank'><img className='w-7' src={leetcodeIcon} /></a>
                 </span>
                 <p className='text-sm md:text-md font-medium w-80'>I build things, break things, and then fix them (hopefully before anyone notices), all while confidently saying 'it works on my machine.'<br/><br/>I love solving problems (and occasionally creating them).</p>
-                <a href={Resume} download>
-                    <button className='rounded-3xl p-2 w-25 md:w-35 md:text-md hover:cursor-pointer bg-[var(--btn-color)] text-[var(--btn-text-color)] hover:bg-[var(--btn-hover-color)]'>Resume</button>
-                </a>
+                <div className='flex flex-row justify-center gap-5'>
+                    <a href={Resume} download>
+                        <button className='rounded-3xl p-2 w-25 md:w-35 md:text-md hover:cursor-pointer bg-[var(--btn-color)] text-[var(--btn-text-color)] hover:bg-[var(--btn-hover-color)]'>Resume</button>
+                    </a>
+                    <a href="#contact">
+                        <button className='rounded-3xl p-2 w-25 md:w-35 md:text-md hover:cursor-pointer bg-[var(--btn-color)] text-[var(--btn-text-color)] hover:bg-[var(--btn-hover-color)]'>Contact Me</button>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
