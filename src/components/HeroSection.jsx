@@ -36,14 +36,14 @@ function HeroSection() {
           </span>
           <div className="w-full md:w-1/2 flex justify-center pt-5">
             <img
-              className="h-70 w-60 md:h-80 md:w-150 rounded-full ml-6 shadow-[var(--background-color)]"
+              className="h-65 w-55 md:h-80 md:w-150 rounded-full ml-6 shadow-[var(--background-color)]"
               src={heroImage}
               alt="Profile Picture of Vishwa Vegad"
             />
           </div>
           <div>
             <img
-              className="size-9 md:size-10 hover:cursor-pointer"
+              className="size-8 md:size-10 hover:cursor-pointer"
               src={themeIcon}
               alt="theme icon"
               onClick={toggleTheme}
@@ -81,7 +81,7 @@ function HeroSection() {
           </h2>
 
           {/* <p className='text-sm md:text-md font-medium w-80'>I build things, break things, and then fix them (hopefully before anyone notices), all while confidently saying 'it works on my machine.'<br/><br/>I love solving problems (and occasionally creating them).</p> */}
-          <div className="flex flex-row justify-center md:justify-start gap-5 sm:mt-10 md:mt-2">
+          <div className="flex flex-row justify-center md:justify-start gap-5 mt-10 md:mt-2">
             <a href={Resume} download>
               <button className="rounded-3xl p-2 w-25 md:w-35 md:text-md hover:cursor-pointer bg-[var(--btn-color)] text-[var(--btn-text-color)] hover:bg-[var(--btn-hover-color)]">
                 Resume

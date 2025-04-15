@@ -86,7 +86,7 @@ function Navbar() {
               ref={crossIconRef}
               src={crossIcon}
               alt=""
-              className="size-10 hover:cursor-pointer"
+              className="size-9 hover:cursor-pointer"
               onClick={(e)=>{
                 e.stopPropagation();
                 setNav(false);
@@ -96,7 +96,7 @@ function Navbar() {
             <img
               src={dropdownIcon}
               alt=""
-              className="size-10 hover:cursor-pointer"
+              className="size-9 hover:cursor-pointer"
               onClick={(e)=>{
                 e.stopPropagation();
                 setNav(true);
