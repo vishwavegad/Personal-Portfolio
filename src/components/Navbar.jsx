@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import dropdownIconLight from "../assets/dropdownIconLight.svg";
 import dropdownIconDark from "../assets/dropdownIconDark.svg";
 import crossIconLight from "../assets/crossIconLight.png";
@@ -14,13 +14,13 @@ function Navbar() {
   const dropdownRef = useRef(null);
   const crossIconRef = useRef(null);
 
-  const scrollToSection = (id)=>{
+  const scrollToSection = (id) => {
     const section = document.getElementById(id);
-    if(section){
-        section.scrollIntoView({behavior: "smooth"});
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
     }
     setNav(false);
-  }
+  };
 
   const links = [
     {
@@ -28,8 +28,8 @@ function Navbar() {
       link: "Home",
     },
     {
-      id:"aboutme",
-      link: "About Me"
+      id: "aboutme",
+      link: "About Me",
     },
     {
       id: "projects",
@@ -41,7 +41,7 @@ function Navbar() {
     },
     {
       id: "education",
-      link: "Education"
+      link: "Education",
     },
     {
       id: "contact",
@@ -49,31 +49,35 @@ function Navbar() {
     },
   ];
 
-  useEffect(()=>{
+  useEffect(() => {
     let timeoutId;
-    const handleClickOutside = (event)=>{
-      if(dropdownRef.current && !dropdownRef.current.contains(event.target) && crossIconRef.current && !crossIconRef.current.contains(event.target))
-      {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        crossIconRef.current &&
+        !crossIconRef.current.contains(event.target)
+      ) {
         setNav(false);
       }
-    }
-    if(nav)
-    {
-      timeoutId = setTimeout(()=>{
+    };
+    if (nav) {
+      timeoutId = setTimeout(() => {
         document.addEventListener("mousedown", handleClickOutside);
-      }, 100)
+      }, 100);
     }
-    return()=>{
+    return () => {
       clearTimeout(timeoutId);
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, [nav]);
 
   return (
     <section className="fixed top-0 left-0 w-full z-50">
-      <div
-        className="relative w-full flex items-center justify-center px-4 h-full bg-[var(--nav-color)]"
-      >
+      <div className="relative w-full flex items-center justify-between px-4 h-full bg-[var(--nav-color)]">
+        <div className="hidden md:block font-extrabold text-2xl pl-10 font-">
+          <p>Vishwa</p>
+        </div>
         <div
           // onClick={(e) => {
           //   e.stopPropagation();
@@ -87,7 +91,7 @@ function Navbar() {
               src={crossIcon}
               alt=""
               className="size-9 hover:cursor-pointer"
-              onClick={(e)=>{
+              onClick={(e) => {
                 e.stopPropagation();
                 setNav(false);
               }}
@@ -97,7 +101,7 @@ function Navbar() {
               src={dropdownIcon}
               alt=""
               className="size-9 hover:cursor-pointer"
-              onClick={(e)=>{
+              onClick={(e) => {
                 e.stopPropagation();
                 setNav(true);
               }}
@@ -105,12 +109,14 @@ function Navbar() {
           )}
         </div>
 
-          {/* Desktop View */}
-        <ul
-          className="gap-10 hidden md:flex text-[var(--text-color)]"
-        >
+        {/* Desktop View */}
+        <ul className="gap-10 hidden md:flex text-[var(--text-color)]">
           {links.map(({ id, link, sectionId }) => (
-            <li className="font-bold p-3 pb-3 cursor-pointer text-xl hover:text-[var(--nav-hover-text-color)]" key={id} onClick={()=>scrollToSection(id)}>
+            <li
+              className="font-bold p-3 pb-3 cursor-pointer text-xl hover:text-[var(--nav-hover-text-color)]"
+              key={id}
+              onClick={() => scrollToSection(id)}
+            >
               {link}
             </li>
           ))}
@@ -123,7 +129,11 @@ function Navbar() {
             className="flex flex-col justify-between items-center absolute top-0 left-0 w-70 py-10 z-40 space-y-2 text-white backdrop-blur-md bg-[var(--dropdown-color)]"
           >
             {links.map(({ id, link }) => (
-              <li className="px-4 cursor-pointer py-4 text-xl hover:text-[var(--dropdown-hover-text-color)]" key={id} onClick={()=>scrollToSection(id)}>
+              <li
+                className="px-4 cursor-pointer py-4 text-xl hover:text-[var(--dropdown-hover-text-color)]"
+                key={id}
+                onClick={() => scrollToSection(id)}
+              >
                 {link}
               </li>
             ))}

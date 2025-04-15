@@ -7,6 +7,9 @@ html, body{
 
 :root{
     --background-color: #fff;
+    --border-color: rgb(90, 54, 32, 0.6);
+    --btn-border-color: rgb(90, 54, 32);
+    /* --btn-text-color: rgb(90, 54, 32); */
     --btn-color: rgb(90, 54, 32);
     --btn-text-color: #fff;
     --btn-hover-color: rgb(64, 37, 20);
@@ -26,6 +29,9 @@ html, body{
 
 [data-theme='dark']{
     --background-color: #292929;
+    --border-color: rgb(255, 255, 255, 0.2);
+    --btn-border-color: #fff;
+    /* --btn-text-color: #fff; */
     --btn-color: #fff;
     --btn-text-color: #222;
     --btn-hover-color: #bdb6b6;

@@ -7,7 +7,7 @@ function Footer() {
       style={{ color: "var(--text-color)" }}
     >
       <div className="text-sm md:text-md">
-        <p>&copy; 2025 Vishwa Vegad.</p>
+        <p><span className="text-lg">&copy;</span> 2025 Vishwa Vegad.</p>
         <p>All rights reserved.</p>
       </div>
     </section>
